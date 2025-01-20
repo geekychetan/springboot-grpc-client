@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.geekychetan.springboot_grpc_client";
+
+// The greeting service definition.
+service UserService {
+    // Sends a greeting
+    rpc getUserDetails (UserRequest) returns (UserResponse) {
+    }
+    // rpc StreamHello(UserRequest) returns (stream UserResponse) {}
+}
+
+// The request message containing the user's name.
+message UserRequest {
+    int32 id = 1;
+}
+
+// The response message containing the greetings
+message UserResponse {
+    string name = 1;
+}
